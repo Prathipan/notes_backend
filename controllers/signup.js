@@ -21,7 +21,7 @@ const InsertVerifyUser = async (name, email, password) => {
       token: token,
     });
 
-    const activationLink = `http://localhost:4000/auth/${token}`;
+    const activationLink = `https://notes-backend-4irj.onrender.com/auth/${token}`;
     const content = `<h3>Hi, there</h3>
     <h3>Welcome to the app</h3>
     <p>Thank you for signing up.Click on the below link to activate</p>
