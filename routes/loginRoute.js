@@ -1,18 +1,17 @@
 const express = require("express");
 const { AuthenticateUser, CheckUser } = require("../controllers/login");
-const client = require("../redis");
 const { InsertVerifyUser, InsertNewUser } = require("../controllers/signup");
 
 const loginRoute = express.Router();
 
-client
-  .connect()
-  .then(() => {
-    console.log("Connected to redis");
-  })
-  .catch((e) => {
-    console.log(e);
-  });
+// client
+//   .connect()
+//   .then(() => {
+//     console.log("Connected to redis");
+//   })
+//   .catch((e) => {
+//     console.log(e);
+//   });
 
 loginRoute.get("/:token", async (req, res) => {
   try {
